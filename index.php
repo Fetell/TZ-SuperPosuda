@@ -18,7 +18,7 @@ class RetailcrmService
     private $keyParam;
 
 
-    const ARTICLE = 'TRA7909';
+    const ARTICLE = 'AZ105R';
 
     /**
      * RetailcrmService constructor.
@@ -59,7 +59,7 @@ class RetailcrmService
      */
     public function getPagination()
     {
-        $url = $this->apiBaseUrl . 'store/products?filter[manufacturer]=TRAXXAS' . $this->keyParam;
+        $url = $this->apiBaseUrl . 'store/products?filter[manufacturer]=Azalita' . $this->keyParam;
         $pagination = $this->sendGet($url);
         return $pagination;
 
@@ -80,7 +80,7 @@ class RetailcrmService
 
         for ($pageCurr = 1; $pageCurr <= $pageTotal; $pageCurr++) {
             $apiPageUrl = '&page=' . $pageCurr;
-            $url = $this->apiBaseUrl . 'store/products?filter[manufacturer]=TRAXXAS' . $apiPageUrl . $this->keyParam;
+            $url = $this->apiBaseUrl . 'store/products?filter[manufacturer]=Azalita' . $apiPageUrl . $this->keyParam;
 
             $products = $this->sendGet($url);
             if (!isset($products->products)) {
@@ -128,7 +128,7 @@ class RetailcrmService
             'firstName' => 'Кристиан',
             'patronymic' => 'Виорелович',
             'prim' => 'тестовое задание',
-            'customerComment' => 'https://url.com',
+            'customerComment' => 'https://github.com/Fetell/TZ-SuperPosuda/blob/main/index.php',
             'items' => [
                 [
                     'offer' => [
